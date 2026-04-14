@@ -25,7 +25,7 @@ This project allows admins to manage student records, marks, and attendance effi
 - XAMPP
 
 ## Project Structure
-'''
+```text
 student_portal/
 │
 ├── db.php
@@ -42,7 +42,7 @@ student_portal/
 ├── student_portal.sql
 └── css/
     └── style.css
-'''
+```
 ## Setup Instructions
 
 1. Install XAMPP
