@@ -1,0 +1,196 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table */
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Dashboard */
+.dashboard-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 220px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background-color: #007bff;
+    color: white;
+}
+
+.logout-card {
+    background: #ff4d4d;
+    color: white;
+}
+
+.logout-card:hover {
+    background: #cc0000;
+}
+/* Attendance Page */
+.attendance-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.attendance-card {
+    background: white;
+    padding: 35px;
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-card form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.attendance-card select,
+.attendance-card input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.attendance-card button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Top left logout */
+.top-logout {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: #ff4d4d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.top-logout:hover {
+    background: #cc0000;
+    color: white;
+}
