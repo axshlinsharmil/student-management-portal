@@ -1,86 +1,134 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root Variables */
+:root {
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --danger: #ff4d4d;
+    --danger-dark: #cc0000;
+    --bg: #f4f6f9;
+    --white: #ffffff;
+    --text: #333;
+    --muted: #555;
+    --border: #ddd;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
     padding: 20px;
 }
 
 /* Headings */
 h2 {
-    color: #333;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: var(--text);
 }
 
 /* Form */
 form {
-    width: 400px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
 }
 
 /* Labels */
 label {
+    display: block;
     font-weight: bold;
+    margin-bottom: 6px;
 }
 
-/* Input fields */
-input {
+/* Inputs and Selects */
+input,
+select {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 12px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 }
 
 /* Buttons */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--white);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* Table */
 table {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
     border-collapse: collapse;
-    background: white;
-    box-shadow: 0px 0px 10px #ccc;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
 }
 
 th {
-    background-color: #007bff;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
+tr:hover {
+    background: #f1f7ff;
 }
 
 /* Links */
 a {
     text-decoration: none;
-    color: #007bff;
+    color: var(--primary);
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3;
+    color: var(--primary-dark);
 }
 
 /* Dashboard */
@@ -92,7 +140,7 @@ a:hover {
 .welcome-text {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #555;
+    color: var(--muted);
 }
 
 .dashboard-cards {
@@ -104,33 +152,32 @@ a:hover {
 }
 
 .card {
-    display: inline-block;
-    width: 220px;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    text-decoration: none;
-    color: #333;
+    width: 230px;
+    padding: 35px 25px;
+    background: var(--white);
+    border-radius: 18px;
+    color: var(--text);
     font-size: 20px;
     font-weight: bold;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    background-color: #007bff;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
 }
 
 .logout-card {
-    background: #ff4d4d;
-    color: white;
+    background: var(--danger);
+    color: var(--white);
 }
 
 .logout-card:hover {
-    background: #cc0000;
+    background: var(--danger-dark);
 }
+
 /* Attendance Page */
 .attendance-container {
     display: flex;
@@ -140,57 +187,78 @@ a:hover {
 }
 
 .attendance-card {
-    background: white;
+    background: var(--white);
     padding: 35px;
-    width: 450px;
+    width: 100%;
+    max-width: 460px;
     border-radius: 20px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .attendance-card form {
-    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     box-shadow: none;
 }
 
-.attendance-card select,
-.attendance-card input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.attendance-card button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-}
-
+/* Back Link */
 .back-link {
     display: block;
     text-align: center;
     margin-top: 20px;
 }
-/* Top left logout */
+
+/* Top Left Logout */
 .top-logout {
     position: absolute;
     top: 20px;
     left: 30px;
-    background: #ff4d4d;
-    color: white;
+    background: var(--danger);
+    color: var(--white);
     padding: 12px 20px;
     border-radius: 10px;
-    text-decoration: none;
     font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
 }
 
 .top-logout:hover {
-    background: #cc0000;
-    color: white;
+    background: var(--danger-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form,
+    .attendance-card {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .dashboard-cards {
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .top-logout {
+        position: static;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
 }
